@@ -1,5 +1,5 @@
 
-// Pdf'teki kodda bazi hatalari cozmek icin uzerinde birkac degisiklik yapildi ve kodun son
+// Pdf'teki kodda bazi hatalari kaldirmak icin uzerinde birkac degisiklik yapildi ve kodun son
 // hali budur
 
 import 'dart:io';
@@ -16,12 +16,12 @@ void main() {
     var i = 0;
     while (i < list.length) {
       if (list[i] == "*") {
-        list[i-1] = (double.parse(list[i-1]) * double.parse(list[i+1])).toStringAsFixed(2);
+        list[i-1] = (double.parse(list[i-1]) * double.parse(list[i+1])).toString();
         list.removeAt(i+1);
         list.removeAt(i);
         i = 0;
       } else if (list[i] == "/"){
-        list[i-1] = (double.parse(list[i-1]) / double.parse(list[i+1])).toStringAsFixed(2);
+        list[i-1] = (double.parse(list[i-1]) / double.parse(list[i+1])).toString();
         list.removeAt(i+1);
         list.removeAt(i);
         i = 0;
