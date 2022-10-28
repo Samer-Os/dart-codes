@@ -12,17 +12,15 @@ void main() {
     var i = 0;
     while (i < list.length) {
       if (list[i] == "*") {
-        list[i-1] = (int.parse(list[i-1]) * int.parse(list[i+1])).toStringAsFixed(2);
+        list[i-1] = (double.parse(list[i-1]) * double.parse(list[i+1])).toStringAsFixed(2);
         list.removeAt(i+1);
         list.removeAt(i);
         i = 0;
-        print(list);
       } else if (list[i] == "/"){
         list[i-1] = (double.parse(list[i-1]) / double.parse(list[i+1])).toStringAsFixed(2);
         list.removeAt(i+1);
         list.removeAt(i);
         i = 0;
-        print(list);
       }
       i++;
     }
@@ -31,17 +29,15 @@ void main() {
     var i = 0;
     while (i < list.length) {
       if (list[i] == "+") {
-        list[i-1] = (double.parse(list[i-1]) + double.parse(list[i+1])).toStringAsFixed(2);
+        list[i-1] = (double.parse(list[i-1]) + double.parse(list[i+1])).toString();
         list.removeAt(i+1);
         list.removeAt(i);
         i = 0;
-        print(list);
       } else if (list[i] == "-"){
-        list[i-1] = (double.parse(list[i-1]) - double.parse(list[i+1])).toStringAsFixed(2);
+        list[i-1] = (double.parse(list[i-1]) - double.parse(list[i+1])).toString();
         list.removeAt(i+1);
         list.removeAt(i);
         i = 0;
-        print(list);
       }
       i++;
     }
