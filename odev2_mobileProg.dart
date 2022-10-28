@@ -1,3 +1,7 @@
+
+// Pdf'teki kodda bazi hatalari cozmek icin uzerinde birkac degisiklik yapildi ve kodun son
+// hali budur
+
 import 'dart:io';
 void main() {
   List<String> list = [];
